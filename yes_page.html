@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHE BELLO, GRAZIE AMORE!</title>
+    <link rel="stylesheet" href="./yes_style.css">
+</head>
+<script>
+    window.onload = function() {
+        const audio = new Audio('musica/24.CESARE CREMONINI - Poetica.mp3'); 
+        audio.loop = true;
+        
+        
+        const promise = audio.play();
+        
+        
+        if (promise !== undefined) {
+            promise.catch(() => {
+                document.getElementById('playButton').hidden = false;
+            });
+        }
+    };
+</script>
+<body>
+    <div class="container">
+        <button id="playButton" hidden 
+                onclick="this.hidden = true; audio.play()">
+            ▶️ Click here for the music!
+        </button>
+    </div>
+    <div class="container">
+        <h1 class="header_text">CHE BELLO, GRAZIE AMORE!</h1>
+        <div class="gif_container">
+            <img src="immaggini/VideoWhatsApp2025-02-10ore20.44.14_9538fce0-ezgif.com-video-to-gif-converter.gif">
+        </div>
+        <h1 class="header_text">see you on the 22 then!<hr>Ti amo,<p> Je t'aime,Aishitemasu,</p> I love you,Te quiero !<hr></h1>
+    </div>
+</body>
+</html>

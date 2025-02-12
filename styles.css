@@ -1,0 +1,89 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #f6c585 0%, #ffe8f0 100%);
+  font-family: 'sans-serif';
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  max-width: 800px;
+}
+
+h1 {
+  font-size: 2.8rem;
+  color: var(--primary-red);
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+button {
+  padding: 1.2rem 2.4rem;
+  border: none;
+  border-radius: 15px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.yes-button {
+  background: var(--primary-green);
+  color: rgb(255, 255, 255);
+}
+
+.yes-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(2, 153, 55, 0.4);
+}
+
+.no-button {
+  background: var(--primary-red);
+  color: rgb(255, 255, 255);
+  transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.no-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(2, 153, 55, 0.4);
+}
+
+.gif_container img {
+  max-width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  margin-top: 2rem;
+}
+
+.countdown {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  h1 { font-size: 2rem; }
+  button { padding: 1rem 2rem; font-size: 1.2rem; }
+  .gif_container img { max-width: 200px; }
+}
+
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.yes-button {
+  animation: heartbeat 1.5s infinite;
+}
